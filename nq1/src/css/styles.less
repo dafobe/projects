@@ -1,0 +1,224 @@
+@smartphones: ~"only screen and (max-width: 740px)";
+@smartphones-ld: ~"only screen and (max-width: 375px)";
+@smartphones-hd: ~"only screen 
+                      and (max-device-width: 667px)
+                      and (min-device-width: 375px)";
+
+@background-color: linear-gradient(to right, #e2ebf6 0%, #c9e8ed 100%);
+@features-color: #868688;
+@features-padding: 15px 0 0 0;
+@features-font-color: #FFFFFF;
+
+.app-container{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content:space-around;
+}
+
+.content{
+  background: @background-color;
+  padding: 3rem 2rem; 
+}
+.content-left{
+  flex: 0 1 370px;
+  flex-flow: row wrap;
+}
+.content-right{
+  flex: 0 1 45%;
+  flex-flow: column wrap;
+  max-width: 450px;
+}
+header {
+  flex: 0 1 100%;
+  margin-top: 2rem;
+  /*height: 133px;*/
+}
+
+footer {
+  flex: 0 1 auto;
+  
+  display: flex;
+  flex-flow: row wrap;
+  justify-content:space-between;
+}
+.details-img{
+  flex: 0 1 auto;
+}
+
+.app-logo{
+  flex: 0 1 370px;
+  height: 60px;
+  width: 370px;
+  background: url(../images/logo.png) no-repeat 0 0;
+  background-size: contain;
+  background-position: right;
+  position: relative;
+}
+.app-name{
+  flex: 0 1 45%;
+  height: 53px;
+  max-width: 450px;
+  background: url(../images/nicequest_app_name.png) no-repeat 0 0;
+  background-size: contain;
+  position: relative;
+}
+
+.app-sample-full{
+  display: block;
+  width: 370px;
+  height: 454px;
+  background: url(../images/nicequest_app_mobile.png) no-repeat 0 0;
+  background-position: right;
+  background-size: contain;
+  position: relative;
+}
+
+.app-sample-small{
+  display: none;
+  height: 148px;
+  background: url(../images/nicequest_app_mobile_responsive.png) no-repeat 0 0;
+  background-position: center;
+  position: relative;
+  padding: 15px 0;
+}
+
+.features{
+  flex: 0 1 auto;
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding-bottom: 20px;
+  
+  .features-description{
+    padding: @features-padding;
+    color: @features-color;
+    line-height: 28px;
+  }
+  
+  .features-label{
+    font-weight: 600;
+    padding: @features-padding;
+    color: #0094d0;
+  }
+  
+  .features-list{
+    padding-left: 60px;
+    font-size: 1.0rem;
+    list-style-type: none;
+    color: @features-color;
+  }
+}
+
+.icon {
+  position: relative;
+  padding: 24px 0 24px 20px;
+  
+  &:before{
+    content: "";
+    position: absolute;
+    background: url(../images/nicequest_app_list.png);
+    width: 58px;
+    height: 57px;
+    top: 0px;
+    left: -44px;
+  }
+  
+  &.features-poll:before{ background-position: 0 0; }
+  &.features-gift:before{ background-position: 0 114px; }
+  &.features-management:before{ background-position: 0 57px; }
+  
+}
+
+.app-link{
+  
+  flex: 0 1 auto;
+  width: 150px;
+  height: 56px;
+  position: relative;
+  background-size: contain;
+  
+  &.app-link--google{
+    background: url(../images/nicequest_app_android.png) no-repeat 0 0;
+  }
+
+  &.app-link--ios{
+    background: url(../images/nicequest_app_ios.png) no-repeat 0 0;
+  }
+}
+ /* ==================================
+        Media Queries Definitions 
+    ==================================*/
+@media @smartphones{
+  .app-container{
+    flex-flow: column wrap;
+  }
+  
+  .content{
+    padding: 0.5rem 0.5rem; 
+  }
+  
+  .app-logo{
+    display: none;
+  }
+  .app-name{
+    background-position: center;
+  }
+  .features{
+    text-align: center;
+    
+    .features-description{
+      display: none;
+    }
+    .features-list{
+      display: inline-block;
+      padding-left: 80px;
+      
+      & li{
+        text-align: left;
+      }
+    }
+  }
+  .content-left{
+    display: none;
+  }
+  .app-sample-small{
+    display: block;
+  }
+  
+  .app-link{
+  
+    flex: 0 1 50%;
+    position: relative;
+  
+    &.app-link--google{
+      background: url(../images/nicequest_app_android.png) no-repeat 0 0;
+      background-size: contain;
+      background-position: center;
+    }
+
+    &.app-link--ios{
+      background: url(../images/nicequest_app_ios.png) no-repeat 0 0;
+      background-size: contain;
+      background-position: center;
+    }
+  }
+  
+  footer {
+    padding: 20px 0;
+  }
+
+}
+
+@media @smartphones-ld{
+  .features{
+    .features-list{
+      list-style-type: initial;
+    }
+  }
+  .icon {
+    padding: 5px 0;
+    
+    &:before{
+      content: none;
+    }
+  }
+}

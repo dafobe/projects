@@ -1,4 +1,4 @@
-# NetQuest Test 2 #
+# Test 2 #
 
 ## GIFTS and CATEGORIES CRUD
 

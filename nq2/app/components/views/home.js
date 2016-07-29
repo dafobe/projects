@@ -6,7 +6,7 @@ const Home = React.createClass({
       <div className="home-page">
         <Card>
           <CardHeader
-            title="NetQuest"
+            title="Test"
           />
           <CardTitle title="Test 2" subtitle="David Fonollosa" />
           <CardText>

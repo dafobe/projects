@@ -1,0 +1,75 @@
+@smartphones: ~"only screen and (max-width: 740px)";
+@smartphones-ld: ~"only screen and (max-width: 375px)";
+@smartphones-hd: ~"only screen 
+                      and (max-device-width: 667px)
+                      and (min-device-width: 375px)";
+
+@background-color: linear-gradient(to right, #e2ebf6 0%, #c9e8ed 100%);
+@features-color: #868688;
+@features-padding: 15px 0 0 0;
+@features-font-color: #FFFFFF;
+
+.layout-main{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content:space-around;
+  background: @background-color;
+}
+
+.primary-header {
+  flex: 0 1 100%;
+  margin: 2rem;
+}
+
+.primary-footer {
+  flex: 0 1 100%;
+  margin-bottom: 2rem;
+}
+
+.layout-aside {
+  flex: 0 1 20%;
+}
+
+.layout-aside-menu {
+  flex: 0 1 20%;
+}
+
+.layout-main {
+  flex: 0 1 70%;
+}
+
+.app-logo{
+  flex: 0 1 100%;
+  height: 60px;
+  width: 370px;
+  background: url(../images/logo.png) no-repeat 0 0;
+  background-size: contain;
+  background-position: right;
+  position: relative;
+}
+.app-name{
+  flex: 0 1 45%;
+  height: 53px;
+  max-width: 450px;
+  background: url(../images/nicequest_app_name.png) no-repeat 0 0;
+  background-size: contain;
+  position: relative;
+}
+
+
+.app-link{
+  
+  flex: 0 1 auto;
+  width: 150px;
+  height: 56px;
+  position: relative;
+  background-size: contain;
+  
+  &.app-link--google{
+    background: url(../images/nicequest_app_android.png) no-repeat 0 0;
+  }
+
+  &.app-link--ios{
+    background: url(../images/nicequest_app_ios.png) no-repeat 0 0;
+  }
+}
